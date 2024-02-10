@@ -99,7 +99,8 @@ p {
  /* Header section */
 
 .header {
-   border-bottom: 1px solid #e7e9fc
+   border-bottom: 1px solid #e7e9fc;
+   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 .header .container {
@@ -116,7 +117,7 @@ p {
    display: block;
    margin-right: 76px;
 
-   color: #4D5AE5;
+   color: #404bbf;
    font-family: "Raleway", sans-serif;
    font-weight: 700;
    font-size: 18px;
@@ -159,7 +160,7 @@ p {
 }
 
 .header__link--active::after {
-   content: " ";
+   content: "";
    position: absolute;
    bottom: -1px;
    display: block;
@@ -224,7 +225,6 @@ address {
 }
 
 .hero .container {
-   max-width: 1440px;
    padding-top: 0;
    padding-bottom: 0;
    
@@ -382,11 +382,16 @@ address {
 
 .portfolio__item {
    width: calc((100% - 48px) / 3);
+   
+   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
    transform: translateY();
 }
 
 .portfolio__item:hover .overlay {
    transform: translateY(0);
+   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+         0px 1px 1px rgba(46, 47, 66, 0.16),
+         0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio .card__content {
